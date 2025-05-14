@@ -1,4 +1,6 @@
-const dbPassword = "mongodb://127.0.0.1:27017/userdb"; // Replace with your actual MongoDB connection string
+require("dotenv").config();
+const dbPassword = process.env.MONGO_URI;
+console.log(dbPassword); // Replace with your actual MongoDB connection string
 
 module.exports = {
   mongoURI: dbPassword,
